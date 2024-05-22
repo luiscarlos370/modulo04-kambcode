@@ -3,7 +3,7 @@ Crear repositorio en github:
 - Nombre: LUIS PALACIOS
 - correo: luiscarlos370@hotmail.com y luiscarlos370@gmail.com
 - Usuario github: luiscarlos370
-- Repositario Tarea 4: 
+- Repositario Tarea 1: 
 
 ## Practica con el DOM:
 ### Modificación del DOM antes.
