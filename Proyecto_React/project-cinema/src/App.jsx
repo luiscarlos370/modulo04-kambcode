@@ -1,96 +1,89 @@
 import './App.css';
+import App3 from './App3.jsx';
+import NuevoComponente from './components/new_components.jsx';
 import img from './img.jsx';
+import React, {Component} from 'react';
+
+
+const data=[
+    {
+       mensaje:     'Rick_Sanchez',
+       imagen:      img.anime01,
+       descripcion: 'Rick es un científico brillante que con sus tendencias escépticas y anarquistas personifica en pleno la filosofía nihilista de la serie',
+       genero:      'Masculino',
+       status:      'alived'
+    },
+ 
+    {
+       mensaje:     'Noob_Noob',
+       imagen:       img.anime02,
+       descripcion: 'Base del Vindicador estos es una descripción',
+       genero:      'Masculino',
+       status:      'Deceased'
+    },
+ 
+    {
+       mensaje:     'Pincesa_Ponieta',
+       imagen:       img.anime03,
+       descripcion: 'estos es una descripción ierra (Dimensión de reemplazo',
+       genero:      'Femenino',
+       status:      'alived'
+    },
+
+    {
+        mensaje:     'Glockenspiel Jerry',
+        imagen:       img.anime04,
+        descripcion: 'Glockenspiel Jerry Base del Vindicador estos es una descripción',
+        genero:      'Masculino',
+        status:      'Deceased'
+     },
+
+     {
+        mensaje:     'Robot Morty',
+        imagen:       img.anime05,
+        descripcion: 'Ciudadela de Ricks estos es una descripción',
+        genero:      'Masculino',
+        status:      'alived'
+     },
+  
+ 
+    {
+       mensaje:     'esto es un mensaje',
+       imagen:      'https://www.terra.com/u/fotografias/m/2023/6/4/f1280x720-17937_149612_5050.jpg',
+       descripcion: 'estos es una descripción',
+       genero:      'Masculino',
+       status:      'alive'
+    }
+ ]
 
 function App() {
-  
+   // const [series] = useState('RICK AND MORTY')
   return (
     <>
-      <div>
-         <div className="imglogo">
-            <img className="imglogo" src={img.logo1}  alt=""/>
+    
+    <div className="imglogo">
+            <img className="imglogo" src={img.logo}  alt=""/>
+            
             <img className="imglogo" src={img.hamburger}  alt=""/>
-         </div>
-         <div className="banner">
-            <div >
-               <div className="title1">EXPLORE LAS</div>
-               <div className="title2">PELICULAS</div>
-            </div>
-         </div>
-         <div>
-               <div>
-                  <div className="title3">CATEGORÍA</div>
-                  <div className="title4">ACCIÓN</div>
-               </div>
-            <div className="contenimg">
-               <div className="imagetamano">EX MACHINA
-                  <img className="imagetamano" src={img.pelicula01}  alt=""/>
-                  <button className='btn'>LA QUIERO</button>
-                  <hr/>
-               </div>
-               <div className="imagetamano">JUNG_E
-                  <img className="imagetamano" src={img.pelicula02}  alt=""/>
-                  <button className='btn'>LA QUIERO</button>
-                  <hr/>
-               </div>
-               <div className="imagetamano">MEJORES QUE NOSOTROS
-                  <img className="imagetamano" src={img.pelicula03}  alt=""/>
-                  <button className='btn'>LA QUIERO</button>
-                  <hr/>
-               </div>
-               <div className="imagetamano">CIUDAD FUTURO
-                  <img className="imagetamano" src={img.pelicula04}  alt=""/>
-                  <button className='btn'>LA QUIERO</button>
-                  <hr/>
-               </div>
-            </div>
-         </div>
-      
-         <div >
+    </div>
+     <div className="banner">
             <div>
-                  <div className="title3">CATEGORÍA</div>
-                  <div className="title4">DRAMA</div>
-            </div>
-           
-            <div className="contenimg">
-               <div className="imagetamano">MADRID
-                  <img className="imagetamano" src={img.pelicula05}  alt=""/>
-                  <button className='btn'>LA QUIERO</button>
-                  <hr/>
-               </div>
-               <div className="imagetamano">BERLIN
-                  <img className="imagetamano" src={img.pelicula06}  alt=""/>
-                  <button className='btn'>LA QUIERO</button>
-                  <hr/>
-               </div>
-               <div className="imagetamano">EGIPTO
-                  <img className="imagetamano" src={img.pelicula07}  alt=""/>
-                  <button className='btn'>LA QUIERO</button>
-                  <hr/>
-               </div>
-               <div className="imagetamano">MAQUINA
-                  <img className="imagetamano" src={img.pelicula08}  alt=""/>
-                  <button className='btn'>LA QUIERO</button>
-                  <hr/>
-               </div> 
-            </div>
-         </div>
+               <div className="title1">SERIE ANIMADA</div>
+               <h1 className='title'>RICK AND MORTY</h1>
+             </div>
+    </div> 
 
-      <div className='linea'>
-         
+     <div className='container'>
+         {data.map((elm) =>(
+            <NuevoComponente key={elm.descripcion} descripcion={elm.descripcion} imagen={elm.imagen} mensaje={elm.mensaje} genero={elm.genero} status={elm.status} />
+         ))}
+
       </div>
-
-         <div >
-            <div className="contenimg">
-                  <img className="imgredes" src={img.facebook} alt=""/>
-                  <img className="imgredes" src={img.instagram} alt=""/>
-                  <img className="imgredes" src={img.twitter} alt=""/>
-                  <img className="imgredes" src={img.youtube} alt=""/>
-            </div>
-         </div>
-         <div>
-            <div className="title5">2024 LUIS CARLOS | © COPYRIGHT</div>
-         </div>
-     </div>
+    
+    <footer>
+      <App3/>
+    </footer>
+         
     </>
   )
 }
