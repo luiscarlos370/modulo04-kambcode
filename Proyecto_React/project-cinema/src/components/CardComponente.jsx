@@ -1,5 +1,5 @@
-const NuevoComponente = (props) => {
-    const {mensaje, imagen, descripcion, genero, status} = props
+const CardComponente = (props) => {
+    const {title, gender, image, status} = props
     return(
        <>
        
@@ -9,14 +9,14 @@ const NuevoComponente = (props) => {
         <div className="head">
             <div className="circle"></div>
             <div className="img">
-                <img src={imagen} alt=""/>
+                <img src={image} alt=""/>
             </div>
         </div>
 
         <div className="description">
-            <h3>{mensaje}</h3>
-            <h4>{genero}</h4>
-            <p>{descripcion}</p>
+            <h3>{title}</h3>
+            <h4>{gender}</h4>
+            <p>Animes</p>
         </div>
 
         <div className="contact">
@@ -28,4 +28,4 @@ const NuevoComponente = (props) => {
     )
  }
 
-export default NuevoComponente
+export default CardComponente

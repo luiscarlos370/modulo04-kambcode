@@ -1,7 +1,7 @@
 import './App.css';
 import img from './img.jsx';
 
-function App3() {
+function Footer_anime() {
   
   return (
     <>
@@ -21,4 +21,4 @@ function App3() {
   )
 }
 
-export default App3
+export default Footer_anime
