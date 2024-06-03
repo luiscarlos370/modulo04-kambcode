@@ -1,8 +1,7 @@
 const CardComponente = (props) => {
     const {title, gender, image, status} = props
     return(
-       <>
-       
+       <>     
    <div className='container'>
 
        <div className="card">

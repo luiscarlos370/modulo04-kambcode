@@ -1,0 +1,22 @@
+.page_container{
+    display: flex;
+    background-color: #5DFD19;
+    padding: 15px 300px;
+}
+
+.btn_paginacion{
+    text-decoration: none;
+    color: #5DFD19;
+    padding: 8px 20px;
+    border-radius: 5px;
+    transition: .3s;
+    font-size: 20px;
+    margin: 2px;
+}
+
+.btn_container{
+    display: flex;
+    justify-content: center;
+    background-color: #5DFD19;
+    padding: 15px
+}

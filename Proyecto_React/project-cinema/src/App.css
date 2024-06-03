@@ -86,7 +86,7 @@
 }
 
 .card:hover {
-  box-shadow: 0 5px 15px rgba(3, 89, 92, .5);
+  box-shadow: 0 5px 15px #5d9943;
   transform: translateY(-15px);
 }
 
@@ -168,6 +168,6 @@
 
 .card .contact a:hover {
   
-  background: #0b6164;
+  background: #5d9943;
  
 }

@@ -1,29 +1,31 @@
 import  { useState, useEffect} from 'react';
 import CardComponente from './components/CardComponente.jsx';
-import CardSearch from './components/Search/Search.jsx';
 import './App.css';
 import Footer_anime from './Footer_anime.jsx';
 import img from './img.jsx';
+import './components/Pagination/Paginacion.jsx'
+import Paginacion from './components/Pagination/Paginacion.jsx';
 
 function App() {
-    const [contador, SetContador] = useState(0)
+ const [pagina, setPagina] = useState(1)
+ const [info, setInfo] = useState({})
+ let [pageNumber, setPageNumber] = useState(1)
     const [APIpersonajes, setAPIpersonajes] = useState([])
     useEffect(() => {
-      fetch('https://rickandmortyapi.com/api/character')
+      fetch(`https://rickandmortyapi.com/api/character/?page=${pagina}`)
          .then((response) => response.json())
-         .then((data)=> setAPIpersonajes(data.results))
-    }, [])
-    console.log(APIpersonajes)
-    
-    const incrementaContador = () => {
-      SetContador(contador + 1)
-    }
+         .then((data)=>{
+          setInfo(data.info.pages)
+          setAPIpersonajes(data.results)
+        })
+    }, [pagina])
+
   return (
+
     <>
 
 <div className="imglogo">
-            <img className="imglogo" src={img.logo}  alt=""/>
-            
+            <img className="imglogo" src={img.logo}  alt=""/>    
             <img className="imglogo" src={img.hamburger}  alt=""/>
     </div>
      <div className="banner">
@@ -33,20 +35,17 @@ function App() {
              </div>
     </div> 
 
-    {/* <CardSearch /> buscador en construcción*/}
-
     <div className='container'>
       {APIpersonajes.length !== 0 && APIpersonajes.map((APIpersona) =>(
                <CardComponente key={APIpersona.id} title= {APIpersona.name} gender={APIpersona.gender } status={APIpersona.status} image={APIpersona.image}/>
           )) }
     </div>
-     
-      <button onClick={incrementaContador} >Incrementar Contador</button>
-    
+         
+     <Paginacion pageNumber={pageNumber} info={info} setPageNumber={setPageNumber} pagina={pagina} setPagina={setPagina} />
+       
     <footer>
       <Footer_anime/>
-    </footer>
-         
+    </footer>       
     </>
   )
 }
