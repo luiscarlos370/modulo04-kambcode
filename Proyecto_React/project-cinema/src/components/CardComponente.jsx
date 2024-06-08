@@ -1,5 +1,7 @@
+import React from "react";
 const CardComponente = (props) => {
     const {title, gender, image, status} = props
+
     return(
        <>     
    <div className='container'>
@@ -19,7 +21,7 @@ const CardComponente = (props) => {
         </div>
 
         <div className="contact">
-            <a href="#">{status}</a>
+            <a >{status} </a>
         </div>
     </div>
 </div>

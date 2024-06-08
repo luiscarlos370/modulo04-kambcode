@@ -1,7 +1,10 @@
 .page_container{
     display: flex;
-    background-color: #5DFD19;
     padding: 15px 300px;
+    justify-content: center;
+    background: #5DFD19;
+    min-height: 5vh;
+    flex-wrap: wrap;
 }
 
 .btn_paginacion{
@@ -17,6 +20,8 @@
 .btn_container{
     display: flex;
     justify-content: center;
-    background-color: #5DFD19;
-    padding: 15px
+    padding: 15px;
+    background: #5DFD19;
+    min-height: 5vh;
+    flex-wrap: wrap;
 }
