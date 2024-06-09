@@ -2,10 +2,10 @@ import  { useState, useEffect} from 'react';
 import CardComponente from './components/CardComponente.jsx';
 import './App.css';
 import Footer_anime from './Footer_anime.jsx';
-import img from './img.jsx';
-import './components/Pagination/Paginacion.jsx'
 import Paginacion from './components/Pagination/Paginacion.jsx';
 import Search from './components/Search/Search.jsx';
+import NavMenu from './components/Nav/NavMenu.jsx';
+import Header_anime from './Header_anime.jsx';
 
 function App() {
  const [pagina, setPagina] = useState(1)
@@ -25,32 +25,13 @@ function App() {
         })
     }, [pagina, search, status, genreFilter])
     
-    console.log(genreFilter)
-    
   return (
-
     <>
 
-<div className="imglogo">
-            <img className="imglogo" src={img.logo}  alt=""/>    
-            <img className="imglogo" src={img.hamburger}  alt=""/>
-    </div>
-     <div className="banner">
-            <div>
-               <div className="title1">SERIE ANIMADA</div>
-               <h1 className='title'>RICK AND MORTY</h1>
-             </div>
-    </div> 
-              <Search setPageNumber={setPageNumber}setSearch={setSearch} setStatus={setStatus} setGenreFilter={setGenreFilter}/>
+        {/* <Header_anime /> */}
+     
+        <NavMenu/>
             
-    <div className='container'>
-      {APIpersonajes.length !== 0 && APIpersonajes.map((APIpersona) =>(
-               <CardComponente key={APIpersona.id} title= {APIpersona.name} gender={APIpersona.gender } status={APIpersona.status} image={APIpersona.image}/>
-          )) }
-    </div>
-         
-     <Paginacion pageNumber={pageNumber} info={info} setPageNumber={setPageNumber} pagina={pagina} setPagina={setPagina} />
-       
     <footer>
       <Footer_anime/>
     </footer>       

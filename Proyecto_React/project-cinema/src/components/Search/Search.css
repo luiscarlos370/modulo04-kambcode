@@ -10,9 +10,10 @@
 .search{
     text-decoration: none;
     color: black;
-    padding: 15px 15%;
+    padding: 15px 10%;
     border-radius: 5px;
     transition: .3s;
+    margin: 2px;
     
 }
 .selector_search{
@@ -21,6 +22,7 @@
     padding: 15px 5%;
     border-radius: 5px;
     transition: .3s;
+    margin: 2px;
     
 }
 
@@ -31,4 +33,5 @@
     border-radius: 5px;
     transition: .3s;
     font-size: 20px;
+    margin: 2px;
 }

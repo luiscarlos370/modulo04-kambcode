@@ -16,13 +16,13 @@
 
 .contenimg{
   display: flex;
-  padding: 20px;
+  padding: 5px;
   justify-content: center;
 }
 
 .banner{
   display: flex;
-  height: 200px;
+  height: 370px;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -33,11 +33,9 @@
 
 .imglogo{
   display: flex;
-  padding: 5px;
   justify-content: space-between;
  
 }
-
 
 .imgredes{
   border-radius: 40%;
@@ -67,7 +65,7 @@
 }
 
 .title5{
-  font-size: 14px;
+  font-size: 9px;
   color:#010710;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   text-align: center;
@@ -76,13 +74,24 @@
 
 .card {
   position: relative;
-  width: 400px;
-  height: 500px;
+  width: 300px;
+  height: 430px;
   background: #fff;
   border-radius: 5px;
   overflow: hidden;
   transition: .5s;
   margin: 15px 20px;
+}
+
+.cardEpisodes {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: .5s;
+  margin: 5px 10px;
 }
 
 .card:hover {
@@ -98,9 +107,9 @@
 
 .card .head .circle {
   position: absolute;
-  width: 400px;
-  height: 300px;
-  border-radius: 30%;
+  width: 300px;
+  height: 250px;
+  border-radius: 50%;
   background: #5DFD19;
   bottom: 0;
 }
@@ -115,6 +124,33 @@
   bottom: -120%;
   left: 50%;
   transform: translate(-50%);
+  background-color: #5DFD19;
+}
+
+.img_Episodes {
+  display: flex;
+  width: 180px;
+  height: 100px;
+  position: absolute;
+  background: #fff;
+  padding: 5px;
+  border-radius: 30%;
+  bottom: -50%;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: #5DFD19;
+  justify-content: center;
+  align-items: center;
+}
+
+.description_Episodes {
+  display: flex;
+  height: 150px;
+  padding: 90px 10px 10px 10px;
+  border-bottom: solid 1px #5DFD19;
+  text-align: center;
+  flex-direction: column;
+  
 }
 
 .card .head .img img {
@@ -127,7 +163,7 @@
 
 .card .description {
   display: flex;
-  height: 300px;
+  height: 250px;
   padding: 160px 20px 20px 20px;
   border-bottom: solid 1px #5DFD19;
   text-align: center;
@@ -151,10 +187,11 @@
 
 .card .contact {
   width: 100%;
-  height: 75px;
+  height: 55px;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 .card .contact a {

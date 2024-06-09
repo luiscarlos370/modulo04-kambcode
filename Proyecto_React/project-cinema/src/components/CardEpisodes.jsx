@@ -1,6 +1,6 @@
 import React from "react";
-const CardComponente = (props) => {
-    const {title, gender, image, status} = props
+const CardEpisodes = (props) => {
+    const {title, gender, image, status, episodes} = props
 
     return(
        <>     
@@ -9,19 +9,19 @@ const CardComponente = (props) => {
        <div className="card">
         <div className="head">
             <div className="circle"></div>
-            <div className="img">
+            <div className="img_Episodes">
                 <img src={image} alt=""/>
+                <h3>{title}</h3>
             </div>
         </div>
 
-        <div className="description">
-            <h3>{title}</h3>
-            <h4>{gender}</h4>
+        <div className="description_Episodes">
+            <h4>{episodes}</h4>
             <h3>Animes</h3>
         </div>
 
         <div className="contact">
-            <a >{status} </a>
+            <h3 >{status} </h3>
         </div>
     </div>
 </div>
@@ -29,4 +29,4 @@ const CardComponente = (props) => {
     )
  }
 
-export default CardComponente
+export default CardEpisodes
